@@ -12,6 +12,30 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+.post_container{
+  margin-left: 30px;
+  border-bottom: 1px solid black;
+}
+
+.comments_container{
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.text{
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.comments{
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.auth p {
+  font-size: 20px;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -20,14 +44,14 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none !important;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    background-color: transparent;
   }
 }
 

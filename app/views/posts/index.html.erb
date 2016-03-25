@@ -4,25 +4,32 @@
 
 <br>
 <% if user_signed_in? %>
-  <%= link_to 'Create New Post', new_post_path %>
+  <h3><%= link_to 'Create New Post', new_post_path %></h3>
   <% else %>
-  <h3>Sign in to make some posts</h3>
+  <div class="auth">
+    <p>To contribute to this blog you need to <%= link_to "sign in", new_user_session_path %>.</p>
+    <p>Or you can create <%= link_to "new account", new_user_registration_path %>.</p>
+  </div>
 <% end %>
 <br>
   <tbody>
     <% @posts.each do |post| %>
+      <div class="post_container">
         <h2><%= link_to post.title, post %></h2>
-        <p><%= post.text %></p>
+        <p class="text"><%= post.text %></p>
         <p>
           <strong>User:</strong>
           <%= post.user.email %>
         </p>
-        <p>
-          <%= link_to 'Show', post %> |
-          <%= link_to 'Edit', edit_post_path(post) %> |
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }%>
-        </p>
+          <p>
+            <%= link_to 'Show', post %> 
+            <% if current_user == post.user %> |
+              <%= link_to 'Edit', edit_post_path(post) %> |
+              <%= link_to 'Delete', post, method: :delete %>
+            <% end %>
+          </p>
         <p><i><%= time_ago_in_words post. created_at %> ago</i></p>
+      </div>
     <% end %>
   </tbody>
 <br>
