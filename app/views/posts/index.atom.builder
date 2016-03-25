@@ -3,7 +3,7 @@ atom_feed do |feed|
 	feed.updated @posts.maximum(:updated_at)
 
 	@posts.each do |post|
-		feed.entry post do |entry|
+		feed.entry(post) do |entry|
 			entry.title post.title
 			entry.content post.text
 		end
