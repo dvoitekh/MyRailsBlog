@@ -1,12 +1,16 @@
+<%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Geetings on my blog</h1>
+<h1>Greetings on my blog</h1>
 
 <br>
 <% if user_signed_in? %>
   <%= link_to 'Create New Post', new_post_path %>
+  <% else %>
+  <h3>Sign in to make some posts</h3>
 <% end %>
-
+<br>
   <tbody>
     <% @posts.each do |post| %>
         <h2><%= link_to post.title, post %></h2>
@@ -20,11 +24,7 @@
           <%= link_to 'Edit', edit_post_path(post) %> |
           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }%>
         </p>
-        <p><%= time_ago_in_words post. created_at %></p>
+        <p><i><%= time_ago_in_words post. created_at %> ago</i></p>
     <% end %>
   </tbody>
 <br>
-
-<% if user_signed_in? %>
-  <%= link_to 'Create New Post', new_post_path %>
-<% end %>

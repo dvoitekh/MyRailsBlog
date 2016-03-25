@@ -11,10 +11,14 @@
   <%= @post.user.email %>
 </p>
 
+<p>
+	<i><%= time_ago_in_words @post.created_at %> ago</i>
+</p>
+
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
         <p><%=comment.text %></p>
-        <p><%= time_ago_in_words comment.created_at %></p>
+        <p><i><%= time_ago_in_words comment.created_at %> ago </i></p>
         <p><%= link_to "Delete comment", [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' }  %></p>
 <% end %>
 
