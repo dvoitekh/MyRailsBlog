@@ -9,7 +9,7 @@ It's a simple blog application implemented using Ruby on Rails. App is also depl
 4. Basic styles using bootstrap-sass gem
 
 ## How to run this app
-If you are determined to run this app on your local server follow the instructions:
+If you are determined to run this app on your local server, follow the instructions:
 - download this app
 -	in your terminal enter to the app folder
 -	run `bundle install --without production` to install all the necessary gems (not including `pg` and `rails_12factor` gems for production)
