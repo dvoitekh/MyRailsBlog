@@ -5,7 +5,7 @@ It's a simple blog application implemented using Ruby on Rails. App is also depl
 ## Features
 1. SQLite used for development
 1. Posts implemented using scaffold
-3. Users authentification using devise gem
+3. Users authentication using devise gem
 4. Basic styles using bootstrap-sass gem
 
 ## How to run this app
