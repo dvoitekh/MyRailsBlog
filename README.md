@@ -19,6 +19,6 @@ If you are determined to run this app on your local server follow the instructio
 Now you will see the main page of the app.
 
 ## How to use this app
-- Note that if you want to make changes to the blog you need to sign in. Otherwise you can only view existing posts.
+- Note that if you want to make any changes to the blog you need to sign in. Otherwise you can only view existing posts.
 - Authenticated users can create posts and comments. Also they can delete or edit both, but only ones belonging to them.
 - You can edit your account by choosing `Edit user`.
