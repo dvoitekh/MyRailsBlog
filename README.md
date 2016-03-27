@@ -11,7 +11,7 @@ It's a simple blog application implemented using Ruby on Rails. App is also depl
 ## How to run this app
 If you are determined to run this app on your local server, follow the instructions:
 - download this app
--	in your terminal enter to the app folder
+-	open your terminal in the app folder
 -	run `bundle install --without production` to install all the necessary gems (not including `pg` and `rails_12factor` gems for production)
 -	run `rake db:migrate` to create local database
 -	run `rails s` to start a local server
